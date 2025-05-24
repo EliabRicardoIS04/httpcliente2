@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>formulario
+
+	</title>
+
+	<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+
+	<link rel="stylesheet" href="./photo-form.component.css" />
+</head>
+
+<body>
+	<div class="usuario"> <label>Usuario:</label> <label>{{this.nombreUsuarioIS || this.usuarioIS.nombre }}  </label></div>
+	<main class="publicar--empleo">
+
+		<div class="contenedor">
+			<div class="div-centrado">
+				<section class="main__form">
+					<h2 class="main__form--title">subir foto</h2>
+					<form (submit)="uploadPhoto(title, contacto)" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="title">nombre del archivo</label>
+							<input #title type="text" name="title" id="title" placeholder="nombre del archivo" />
+						</div>
+						<label for="title">Contactos </label>
+						
+								<input #contacto class="checkbox"  type="text" checked="checked" placeholder="Escribe el correo al que quieres enviar la imagen">
+
+						<div class="form-file">
+							<div class="form-file__action">
+								<label for="image" class="title">Foto</label>
+								<input type="file" name="image" id="image" (change)="onPhotoSelected($event)" #photoInput>
+							</div>
+							<div class="form-file__result" id="result-image">
+								<img [src]="photoSelected || 'photos_/f3.jpg'" id="img-result" alt="" (click)="photoInput.click()">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="form-button" id="botonRecargar"
+								(click)="actualizarPagina()">Publicar</button>
+						</div>
+					</form>
+				</section>
+			</div>
+		</div>
+
+	</main>
+
+
+</body>
+
+</html>

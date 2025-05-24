@@ -1,0 +1,22 @@
+.usuario{
+	color: rgb(192, 255, 218);
+	font-size: large;
+	
+	width: 400px;
+	height: 50px;
+	background-color: rgb(109, 107, 107);
+	border-radius: 20px;
+	padding: 5px;
+	
+  margin: 10px;
+}
+.usuario label{
+	border-radius: 0%;
+	display: inline-block;
+	
+  padding: 5px;
+	
+  margin: 5px;
+
+	background-color: rgb(109, 107, 107);
+}

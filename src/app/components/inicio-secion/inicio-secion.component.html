@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Iniciar Secion</title>
+    
+  </head>
+  <body>
+
+    <div class="login-box">
+     
+      <h1>Inicio de Sesion</h1>
+      <form (submit)="iniciarSecion(correo)">
+        <!-- USERNAME INPUT -->
+        <label for="username">Correo</label>
+        <input type="text" placeholder="Correo" #correo>
+        <!-- PASSWORD INPUT -->
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Contraseña" #password>
+        <input type="submit" value="Enviar">
+        
+      </form>
+    </div>
+  </body>
+</html>
